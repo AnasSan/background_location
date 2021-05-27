@@ -186,7 +186,7 @@ class LocationUpdatesService : Service() {
         try {
             mFusedLocationClient!!.removeLocationUpdates(mLocationCallback!!)
             Utils.setRequestingLocationUpdates(this, false)
-            mNotificationManager!!.cancel(NOTIFICATION_ID)
+            //mNotificationManager!!.cancel(NOTIFICATION_ID)
         } catch (unlikely: SecurityException) {
             Utils.setRequestingLocationUpdates(this, true)
         }
