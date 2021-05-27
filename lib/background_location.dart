@@ -62,8 +62,6 @@ class BackgroundLocation {
     return completer.future;
   }
 
-
-
   /// Register a function to recive location updates as long as the location
   /// service has started
   static getLocationUpdates(Function(Location) location) {
@@ -100,14 +98,14 @@ class Location {
   bool? isMock;
 
   Location(
-      {@required this.longitude,
-      @required this.latitude,
-      @required this.altitude,
-      @required this.accuracy,
-      @required this.bearing,
-      @required this.speed,
-      @required this.time,
-      @required this.isMock});
+      {this.longitude,
+      this.latitude,
+      this.altitude,
+      this.accuracy,
+      this.bearing,
+      this.speed,
+      this.time,
+      this.isMock});
 
   toMap() {
     var obj = {
