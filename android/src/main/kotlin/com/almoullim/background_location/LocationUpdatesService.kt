@@ -96,15 +96,15 @@ class LocationUpdatesService : Service() {
         handlerThread.start()
         mServiceHandler = Handler(handlerThread.looper)
 
-        mNotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val name = "Application Name"
-            val mChannel = NotificationChannel(CHANNEL_ID, name, NotificationManager.IMPORTANCE_LOW)
-            mChannel.setSound(null, null)
-            mNotificationManager!!.createNotificationChannel(mChannel)
-        }
+        // mNotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        // if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        //     val name = "Application Name"
+        //     val mChannel = NotificationChannel(CHANNEL_ID, name, NotificationManager.IMPORTANCE_LOW)
+        //     mChannel.setSound(null, null)
+        //     mNotificationManager!!.createNotificationChannel(mChannel)
+        // }
 
-        startForeground(NOTIFICATION_ID, notification.build())
+        // startForeground(NOTIFICATION_ID, notification.build())
 
         broadcastReceiver = object : BroadcastReceiver() {
             override fun onReceive(context: Context?, intent: Intent?) {
