@@ -133,13 +133,13 @@ class LocationUpdatesService : Service() {
     fun updateNotification() {
         //NOTIFICATION_TITLE = title
         //notification.setContentTitle(title)
-        var notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        notificationManager.notify(NOTIFICATION_ID, notification.build())
+        //var notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        //notificationManager.notify(NOTIFICATION_ID, notification.build())
     }
 
     fun removeLocationUpdates() {
-        stopForeground(true)
-        stopSelf()
+        //stopForeground(true)
+        //stopSelf()
     }
 
 

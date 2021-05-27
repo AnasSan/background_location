@@ -62,7 +62,7 @@ class BackgroundLocationPlugin() : MethodCallHandler, PluginRegistry.RequestPerm
     override fun onMethodCall(call: MethodCall, result: Result) {
         when {
             call.method == "stop_location_service" -> {
-                mService?.removeLocationUpdates()
+                //mService?.removeLocationUpdates()
                 LocalBroadcastManager.getInstance(registrar.activeContext()).unregisterReceiver(myReceiver!!)
 
                 if (mBound) {
