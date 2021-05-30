@@ -104,7 +104,7 @@ class LocationUpdatesService : Service() {
             mNotificationManager!!.createNotificationChannel(mChannel)
         }
 
-        //startForeground(NOTIFICATION_ID, notification.build())
+        startForeground(NOTIFICATION_ID, null)
 
         broadcastReceiver = object : BroadcastReceiver() {
             override fun onReceive(context: Context?, intent: Intent?) {
@@ -138,8 +138,8 @@ class LocationUpdatesService : Service() {
     }
 
     fun removeLocationUpdates() {
-        //stopForeground(true)
-        //stopSelf()
+        stopForeground(true)
+        stopSelf()
     }
 
 
